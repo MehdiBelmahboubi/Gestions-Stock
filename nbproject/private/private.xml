@@ -3,8 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/Users/macair/IdeaProjects/Gestions-Stock/src/gestions_de_stock/Login.java</file>
             <file>file:/Users/macair/IdeaProjects/Gestions-Stock/src/gestions_de_stock/connection.java</file>
+=======
+            <file>file:/D:/Emsi_4iir/Poo%20Java/Gestions_de_Stock/src/gestions_de_stock/Login.java</file>
+            <file>file:/D:/Emsi_4iir/Poo%20Java/Gestions_de_Stock/src/gestions_de_stock/connection.java</file>
+            <file>file:/D:/Emsi_4iir/Poo%20Java/Gestions_de_Stock/src/gestions_de_stock/Commande.java</file>
+            <file>file:/D:/Emsi_4iir/Poo%20Java/Gestions_de_Stock/src/gestions_de_stock/Clients.java</file>
+            <file>file:/D:/Emsi_4iir/Poo%20Java/Gestions_de_Stock/src/gestions_de_stock/Article.java</file>
+            <file>file:/D:/Emsi_4iir/Poo%20Java/Gestions_de_Stock/src/gestions_de_stock/Dashbord.java</file>
+>>>>>>> 2a69536a0f48583bf8ff19d0a9374694bff53ad5
         </group>
     </open-files>
 </project-private>
