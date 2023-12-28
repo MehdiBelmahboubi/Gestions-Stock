@@ -4,8 +4,10 @@
  */
 package gestions_de_stock;
 
+import Table_data.Clients_view;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import java.awt.*;
+import java.sql.SQLException;
 
 /**
  *
@@ -19,12 +21,15 @@ public class Clients extends javax.swing.JInternalFrame {
     Color defaultcolor = new Color(173,203,227);
     public Clients() {
         initComponents();
+        try {
+            Clients_view.populateTable(jTable1);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         this.getContentPane().setBackground(defaultcolor);
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
-        
-        
     }
 
     /**
@@ -164,6 +169,11 @@ public class Clients extends javax.swing.JInternalFrame {
         jPanel2.setBackground(new java.awt.Color(231, 239, 246));
 
         jButton1.setText("Ajouter");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -303,6 +313,10 @@ public class Clients extends javax.swing.JInternalFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

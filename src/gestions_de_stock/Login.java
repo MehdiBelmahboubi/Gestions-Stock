@@ -4,7 +4,8 @@
  */
 package gestions_de_stock;
 
-import javax.swing.*;
+import Table_data.connection;
+
 import java.awt.*;
 
 /**

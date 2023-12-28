@@ -1,4 +1,4 @@
-package gestions_de_stock;
+package Table_data;
 import java.sql.*;
 
 public class connection {
