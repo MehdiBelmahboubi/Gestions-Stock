@@ -22,7 +22,6 @@ public class Login extends javax.swing.JFrame {
         
         pandefault = new Color(102,153,255);
         panClick = new Color(102, 128, 204);
-        
     }
 
     /**
