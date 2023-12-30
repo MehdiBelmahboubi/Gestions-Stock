@@ -529,7 +529,6 @@ public class Dashbord extends javax.swing.JFrame {
         Clients cl = new Clients();
         jPanel3.removeAll();
         jPanel3.add(cl).setVisible(true);
-
     }//GEN-LAST:event_Menu1MouseClicked
 
     private void Menu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu2MouseClicked

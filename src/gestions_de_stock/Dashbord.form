@@ -541,6 +541,9 @@
                       <Image iconType="3" name="/icon/icons8-supplier-30.png"/>
                     </Property>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="Dashbord_jLabel15"/>
+                  </AuxValues>
                 </Component>
               </SubComponents>
             </Container>
