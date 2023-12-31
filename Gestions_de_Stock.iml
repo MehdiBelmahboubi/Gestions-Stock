@@ -10,5 +10,17 @@
     <orderEntry type="library" name="mssql-jdbc-12.4.2.jre11" level="application" />
     <orderEntry type="library" name="jars" level="project" />
     <orderEntry type="library" name="mysql-connector-j-8.2.0" level="project" />
+    <orderEntry type="library" name="poi-5.0.0" level="project" />
+    <orderEntry type="library" name="poi-examples-5.0.0" level="project" />
+    <orderEntry type="library" name="poi-excelant-5.0.0" level="project" />
+    <orderEntry type="library" name="poi-integration-5.0.0" level="project" />
+    <orderEntry type="library" name="poi-ooxml-5.0.0" level="project" />
+    <orderEntry type="library" name="poi-ooxml-full-5.0.0" level="project" />
+    <orderEntry type="library" name="poi-scratchpad-5.0.0" level="project" />
+    <orderEntry type="library" name="poi-ooxml-lite-5.0.0" level="project" />
+    <orderEntry type="library" name="xmlbeans-4.0.0" level="project" />
+    <orderEntry type="library" name="commons-collections4-4.4" level="project" />
+    <orderEntry type="library" name="commons-compress-1.20" level="project" />
+    <orderEntry type="library" name="commons-math3-3.6.1" level="project" />
   </component>
 </module>

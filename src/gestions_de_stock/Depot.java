@@ -46,8 +46,6 @@ public class Depot extends javax.swing.JInternalFrame {
         jPanel6 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
         jTextField23 = new javax.swing.JTextField();
-        jLabel25 = new javax.swing.JLabel();
-        jTextField24 = new javax.swing.JTextField();
         jLabel27 = new javax.swing.JLabel();
         jTextField26 = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
@@ -120,9 +118,6 @@ public class Depot extends javax.swing.JInternalFrame {
         jLabel24.setForeground(new java.awt.Color(238, 238, 238));
         jLabel24.setText("Code");
 
-        jLabel25.setForeground(new java.awt.Color(238, 238, 238));
-        jLabel25.setText("Numéro");
-
         jLabel27.setForeground(new java.awt.Color(238, 238, 238));
         jLabel27.setText("Ville");
 
@@ -134,25 +129,24 @@ public class Depot extends javax.swing.JInternalFrame {
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(55, 55, 55)
                         .addComponent(jLabel24)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jLabel25)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 374, Short.MAX_VALUE)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField26, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField27, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                        .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 389, Short.MAX_VALUE)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel28)
-                            .addComponent(jLabel27))
-                        .addGap(175, 175, 175)))
+                            .addComponent(jTextField26, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                                .addComponent(jLabel27)
+                                .addGap(204, 204, 204))))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(332, 332, 332)
+                        .addComponent(jLabel28)
+                        .addGap(29, 29, 29)
+                        .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(39, 39, 39))
         );
         jPanel6Layout.setVerticalGroup(
@@ -166,14 +160,11 @@ public class Depot extends javax.swing.JInternalFrame {
                     .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel27)))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel25)
-                    .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel28)))
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addGap(24, 24, 24)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel28))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         jPanel4.setBackground(new java.awt.Color(42, 77, 105));
@@ -319,7 +310,6 @@ public class Depot extends javax.swing.JInternalFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JPanel jPanel3;
@@ -328,7 +318,6 @@ public class Depot extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField23;
-    private javax.swing.JTextField jTextField24;
     private javax.swing.JTextField jTextField26;
     private javax.swing.JTextField jTextField27;
     // End of variables declaration//GEN-END:variables

@@ -5,6 +5,7 @@
 package gestions_de_stock;
 
 import Table_data.Clients_view;
+import Table_data.Impression_Exportation;
 import Table_data.navigation_button;
 
 import javax.swing.*;
@@ -12,6 +13,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import java.awt.*;
+import java.io.FileNotFoundException;
 import java.sql.SQLException;
 
 /**
@@ -369,11 +371,21 @@ public class Clients extends javax.swing.JInternalFrame {
         jButton9.setFont(new java.awt.Font("Menlo", 0, 14)); // NOI18N
         jButton9.setForeground(new java.awt.Color(238, 238, 238));
         jButton9.setText("Exporter");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
 
         jButton10.setBackground(new java.awt.Color(42, 77, 105));
         jButton10.setFont(new java.awt.Font("Menlo", 0, 14)); // NOI18N
         jButton10.setForeground(new java.awt.Color(238, 238, 238));
         jButton10.setText("Imprimer");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -565,6 +577,17 @@ public class Clients extends javax.swing.JInternalFrame {
             }
         }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+        String titre = "Liste des Clients";
+        Impression_Exportation.imprimerTable(jTable1,titre);
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+            Impression_Exportation.exporterExcel(jTable1);
+    }//GEN-LAST:event_jButton9ActionPerformed
 
 
 

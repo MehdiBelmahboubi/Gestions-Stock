@@ -3,7 +3,10 @@ package Table_data;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.awt.print.PrinterJob;
+import java.awt.print.PrinterException;
 import java.sql.*;
+import java.text.MessageFormat;
 
 public class Clients_view extends Component {
 
@@ -121,7 +124,6 @@ public class Clients_view extends Component {
             }
         }
     }
-
 
 
     public static void clear(JTextField j1, JTextField j2, JTextField j3, JTextField j4, JTextField j5, JTextField j6, JTextField j7,JTable table)
