@@ -29,6 +29,9 @@ public class Dashbord extends javax.swing.JFrame {
         Menu4.setBackground(defaultcolor);
         Menu5.setBackground(defaultcolor);
         Menu6.setBackground(defaultcolor);
+        Menu7.setBackground(defaultcolor);
+        Menu8.setBackground(defaultcolor);
+        Menu9.setBackground(defaultcolor);
     }
     
     
@@ -71,6 +74,15 @@ public class Dashbord extends javax.swing.JFrame {
         Menu6 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
+        Menu7 = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        Menu8 = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        Menu9 = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -109,7 +121,7 @@ public class Dashbord extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 802, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 828, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -164,7 +176,7 @@ public class Dashbord extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 572, Short.MAX_VALUE))
+                .addGap(0, 597, Short.MAX_VALUE))
         );
 
         Menu.add(jPanel4, java.awt.BorderLayout.LINE_START);
@@ -194,7 +206,7 @@ public class Dashbord extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Menu1Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -375,6 +387,43 @@ public class Dashbord extends javax.swing.JFrame {
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-delivery-30.png"))); // NOI18N
 
+        Menu7.setBackground(new java.awt.Color(75, 134, 180));
+        Menu7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Menu7MouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Menu7MousePressed(evt);
+            }
+        });
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI Variable", 1, 16)); // NOI18N
+        jLabel20.setText("Gestions de ligne commande");
+        jLabel20.setPreferredSize(new java.awt.Dimension(54, 30));
+
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-order-completed-30.png"))); // NOI18N
+
+        javax.swing.GroupLayout Menu7Layout = new javax.swing.GroupLayout(Menu7);
+        Menu7.setLayout(Menu7Layout);
+        Menu7Layout.setHorizontalGroup(
+            Menu7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Menu7Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jLabel21)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        Menu7Layout.setVerticalGroup(
+            Menu7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Menu7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Menu7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel21))
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout Menu6Layout = new javax.swing.GroupLayout(Menu6);
         Menu6.setLayout(Menu6Layout);
         Menu6Layout.setHorizontalGroup(
@@ -385,6 +434,7 @@ public class Dashbord extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(Menu7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         Menu6Layout.setVerticalGroup(
             Menu6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -393,6 +443,81 @@ public class Dashbord extends javax.swing.JFrame {
                 .addGroup(Menu6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addComponent(Menu7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        Menu8.setBackground(new java.awt.Color(75, 134, 180));
+        Menu8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Menu8MouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Menu8MousePressed(evt);
+            }
+        });
+
+        jLabel22.setFont(new java.awt.Font("Segoe UI Variable", 1, 16)); // NOI18N
+        jLabel22.setText("Gestions de ligne de livraison");
+        jLabel22.setPreferredSize(new java.awt.Dimension(54, 30));
+
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-delivery-30.png"))); // NOI18N
+
+        javax.swing.GroupLayout Menu8Layout = new javax.swing.GroupLayout(Menu8);
+        Menu8.setLayout(Menu8Layout);
+        Menu8Layout.setHorizontalGroup(
+            Menu8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Menu8Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        Menu8Layout.setVerticalGroup(
+            Menu8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Menu8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Menu8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        Menu9.setBackground(new java.awt.Color(75, 134, 180));
+        Menu9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Menu9MouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Menu9MousePressed(evt);
+            }
+        });
+
+        jLabel24.setFont(new java.awt.Font("Segoe UI Variable", 1, 16)); // NOI18N
+        jLabel24.setText("Gestions de stock");
+        jLabel24.setPreferredSize(new java.awt.Dimension(54, 30));
+
+        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-stock-64.png"))); // NOI18N
+
+        javax.swing.GroupLayout Menu9Layout = new javax.swing.GroupLayout(Menu9);
+        Menu9.setLayout(Menu9Layout);
+        Menu9Layout.setHorizontalGroup(
+            Menu9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Menu9Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        Menu9Layout.setVerticalGroup(
+            Menu9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Menu9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Menu9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -400,35 +525,44 @@ public class Dashbord extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Menu1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(92, 92, 92)
-                .addComponent(jLabel7)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(Menu2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(Menu3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(Menu4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(Menu5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(Menu6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(91, 91, 91)
+                .addComponent(jLabel7)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(Menu5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Menu9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Menu8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Menu4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addComponent(Menu1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(59, 59, 59)
+                .addGap(20, 20, 20)
                 .addComponent(jLabel7)
-                .addGap(59, 59, 59)
+                .addGap(46, 46, 46)
                 .addComponent(Menu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Menu2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Menu3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Menu4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Menu5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Menu6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Menu8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Menu9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(113, Short.MAX_VALUE))
         );
 
         Menu.add(jPanel5, java.awt.BorderLayout.CENTER);
@@ -441,11 +575,11 @@ public class Dashbord extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1024, Short.MAX_VALUE)
+            .addGap(0, 1062, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 616, Short.MAX_VALUE)
+            .addGap(0, 641, Short.MAX_VALUE)
         );
 
         getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
@@ -470,6 +604,9 @@ public class Dashbord extends javax.swing.JFrame {
             Menu4.setBackground(defaultcolor);
             Menu5.setBackground(defaultcolor);
             Menu6.setBackground(defaultcolor);
+            Menu7.setBackground(defaultcolor);
+            Menu8.setBackground(defaultcolor);
+            Menu9.setBackground(defaultcolor);
         }else {
             hideshow(Menu,a);
             SwingUtilities.updateComponentTreeUI(this);
@@ -480,6 +617,9 @@ public class Dashbord extends javax.swing.JFrame {
             Menu4.setBackground(defaultcolor);
             Menu5.setBackground(defaultcolor);
             Menu6.setBackground(defaultcolor);
+            Menu7.setBackground(defaultcolor);
+            Menu8.setBackground(defaultcolor);
+            Menu9.setBackground(defaultcolor);
         }
         jPanel3.removeAll();
     }//GEN-LAST:event_jLabel1MouseClicked
@@ -492,6 +632,9 @@ public class Dashbord extends javax.swing.JFrame {
         Menu4.setBackground(defaultcolor);
         Menu5.setBackground(defaultcolor);
         Menu6.setBackground(defaultcolor);
+        Menu7.setBackground(defaultcolor);
+        Menu8.setBackground(defaultcolor);
+        Menu9.setBackground(defaultcolor);
     }//GEN-LAST:event_Menu1MousePressed
 
     private void Menu2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu2MousePressed
@@ -502,6 +645,9 @@ public class Dashbord extends javax.swing.JFrame {
         Menu4.setBackground(defaultcolor);
         Menu5.setBackground(defaultcolor);
         Menu6.setBackground(defaultcolor);
+        Menu7.setBackground(defaultcolor);
+        Menu8.setBackground(defaultcolor);
+        Menu9.setBackground(defaultcolor);
     }//GEN-LAST:event_Menu2MousePressed
 
     private void Menu3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu3MousePressed
@@ -512,6 +658,9 @@ public class Dashbord extends javax.swing.JFrame {
         Menu4.setBackground(defaultcolor);
         Menu5.setBackground(defaultcolor);
         Menu6.setBackground(defaultcolor);
+        Menu7.setBackground(defaultcolor);
+        Menu8.setBackground(defaultcolor);
+        Menu9.setBackground(defaultcolor);
     }//GEN-LAST:event_Menu3MousePressed
 
     private void Menu4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu4MousePressed
@@ -522,6 +671,9 @@ public class Dashbord extends javax.swing.JFrame {
         Menu4.setBackground(clickcolor);
         Menu5.setBackground(defaultcolor);
         Menu6.setBackground(defaultcolor);
+        Menu7.setBackground(defaultcolor);
+        Menu8.setBackground(defaultcolor);
+        Menu9.setBackground(defaultcolor);
     }//GEN-LAST:event_Menu4MousePressed
 
     private void Menu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu1MouseClicked
@@ -559,6 +711,9 @@ public class Dashbord extends javax.swing.JFrame {
             Menu4.setBackground(defaultcolor);  
             Menu5.setBackground(clickcolor);
             Menu6.setBackground(defaultcolor);// TODO add your handling code here:
+            Menu7.setBackground(defaultcolor);
+            Menu8.setBackground(defaultcolor);
+            Menu9.setBackground(defaultcolor);
     }//GEN-LAST:event_Menu5MousePressed
 
     private void Menu4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu4MouseClicked
@@ -583,7 +738,74 @@ public class Dashbord extends javax.swing.JFrame {
             Menu4.setBackground(defaultcolor);  
             Menu5.setBackground(defaultcolor);
             Menu6.setBackground(clickcolor);
+            Menu7.setBackground(defaultcolor);
+            Menu8.setBackground(defaultcolor);
+            Menu9.setBackground(defaultcolor);
     }//GEN-LAST:event_Menu6MousePressed
+
+    private void Menu7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu7MouseClicked
+        // TODO add your handling code here:
+        LigneCommande lc = new LigneCommande();
+        jPanel3.removeAll();
+        jPanel3.add(lc).setVisible(true);
+    }//GEN-LAST:event_Menu7MouseClicked
+
+    private void Menu7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu7MousePressed
+        // TODO add your handling code here:
+        
+            Menu1.setBackground(defaultcolor);
+            Menu2.setBackground(defaultcolor);
+            Menu3.setBackground(defaultcolor);
+            Menu4.setBackground(defaultcolor);  
+            Menu5.setBackground(defaultcolor);
+            Menu6.setBackground(defaultcolor);
+            Menu7.setBackground(clickcolor);
+            Menu8.setBackground(defaultcolor);
+            Menu9.setBackground(defaultcolor);
+            
+    }//GEN-LAST:event_Menu7MousePressed
+
+    private void Menu8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu8MouseClicked
+        // TODO add your handling code here:
+        lignelivraison lv = new lignelivraison();
+        jPanel3.removeAll();
+        jPanel3.add(lv).setVisible(true);
+    }//GEN-LAST:event_Menu8MouseClicked
+
+    private void Menu8MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu8MousePressed
+        // TODO add your handling code here:
+            Menu1.setBackground(defaultcolor);
+            Menu2.setBackground(defaultcolor);
+            Menu3.setBackground(defaultcolor);
+            Menu4.setBackground(defaultcolor);  
+            Menu5.setBackground(defaultcolor);
+            Menu6.setBackground(defaultcolor);
+            Menu7.setBackground(defaultcolor);
+            Menu8.setBackground(clickcolor);
+            Menu9.setBackground(defaultcolor);
+    }//GEN-LAST:event_Menu8MousePressed
+
+    private void Menu9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu9MouseClicked
+        // TODO add your handling code here:
+        Stock st = new Stock();
+        jPanel3.removeAll();
+        jPanel3.add(st).setVisible(true);
+        
+    }//GEN-LAST:event_Menu9MouseClicked
+
+    private void Menu9MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu9MousePressed
+        // TODO add your handling code here:
+        
+                    Menu1.setBackground(defaultcolor);
+            Menu2.setBackground(defaultcolor);
+            Menu3.setBackground(defaultcolor);
+            Menu4.setBackground(defaultcolor);  
+            Menu5.setBackground(defaultcolor);
+            Menu6.setBackground(defaultcolor);
+            Menu7.setBackground(defaultcolor);
+            Menu8.setBackground(defaultcolor);
+            Menu9.setBackground(clickcolor);
+    }//GEN-LAST:event_Menu9MousePressed
 
     public void hideshow(JPanel menushowhide , boolean dashbord)
     {
@@ -641,6 +863,9 @@ public class Dashbord extends javax.swing.JFrame {
     private javax.swing.JPanel Menu4;
     private javax.swing.JPanel Menu5;
     private javax.swing.JPanel Menu6;
+    private javax.swing.JPanel Menu7;
+    private javax.swing.JPanel Menu8;
+    private javax.swing.JPanel Menu9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -653,6 +878,12 @@ public class Dashbord extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
