@@ -5,10 +5,15 @@
 package gestions_de_stock;
 
 import Table_data.Impression_Exportation;
+import Table_data.Stock_view;
+import Table_data.ligneCommande_view;
 import Table_data.navigation_button;
 
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import java.awt.*;
+import java.sql.SQLException;
 
 /**
  *
@@ -22,10 +27,30 @@ public class LigneCommande extends javax.swing.JInternalFrame {
     Color defaultcolor = new Color(173,203,227);
     public LigneCommande() {
         initComponents();
+        try {
+            ligneCommande_view.populateTable(jTable1);
+            ligneCommande_view.populateCombo2(jComboBox2);
+            ligneCommande_view.populateCombo1(jComboBox1);
+            ligneCommande_view.clear(jTextField23,jTextField26,jComboBox1,jComboBox2,jTable1);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         this.getContentPane().setBackground(defaultcolor);
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
+        jLabel9.setVisible(false);
+        jLabel10.setVisible(false);
+
+
+        jTable1.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                if(!e.getValueIsAdjusting()){
+                    ligneCommande_view.SelectRow(jTextField23,jTextField26,jComboBox1,jComboBox2,jTable1);
+                }
+            }
+        });
     }
 
     /**
@@ -152,6 +177,11 @@ public class LigneCommande extends javax.swing.JInternalFrame {
         jButton2.setFont(new java.awt.Font("Menlo", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(238, 238, 238));
         jButton2.setText("Rechercher");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(42, 77, 105));
         jButton3.setFont(new java.awt.Font("Menlo", 0, 14)); // NOI18N
@@ -264,6 +294,11 @@ public class LigneCommande extends javax.swing.JInternalFrame {
         jButton11.setFont(new java.awt.Font("Menlo", 0, 14)); // NOI18N
         jButton11.setForeground(new java.awt.Color(238, 238, 238));
         jButton11.setText("Clear");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         jLabel9.setFont(new java.awt.Font("Showcard Gothic", 1, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -379,14 +414,54 @@ public class LigneCommande extends javax.swing.JInternalFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        if(jTextField23.getText().equals("")||jTextField26.getText().equals("")||jComboBox1.toString().equals("")||jComboBox2.toString().equals(""))
+        {
+            jLabel9.setText("Veuiller remplir Tous les Champs !!!");
+            jLabel9.setVisible(true);
+        }else {
+            try {
+                ligneCommande_view.addLigneCmd(jTextField23,jTextField26, jComboBox1, jComboBox2, jTable1);
+                jLabel10.setText("Ligne Ajouter !!!");
+                jLabel10.setVisible(true);
+                jLabel9.setVisible(false);
+                ligneCommande_view.clear(jTextField23,jTextField26, jComboBox1, jComboBox2, jTable1);
+            } catch (SQLException e) {
+                jLabel10.setText("Erruer Ajout !!!");
+                jLabel10.setBackground(Color.red);
+                jLabel10.setVisible(true);
+            }
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        if(jTextField23.getText().equals("")||jTextField26.getText().equals("")||jComboBox1.toString().equals("")||jComboBox2.toString().equals(""))
+        {
+            jLabel9.setText("Veuiller remplir Tous les Champs !!!");
+            jLabel9.setVisible(true);
+        }else {
+
+            ligneCommande_view.DeleteLigneCmd(jTextField23,jTable1);
+            jLabel10.setText("Ligne Supprimer !!!");
+            jLabel10.setVisible(true);
+            jLabel9.setVisible(false);
+            ligneCommande_view.clear(jTextField23,jTextField26, jComboBox1, jComboBox2, jTable1);
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        if(jTextField23.getText().equals("")||jTextField26.getText().equals("")||jComboBox1.toString().equals("")||jComboBox2.toString().equals(""))
+        {
+            jLabel9.setText("Veuiller remplir Tous les Champs !!!");
+            jLabel9.setVisible(true);
+        }else {
+            ligneCommande_view.UpdateLigneCmd(jTextField23,jTextField26, jComboBox1,jComboBox2 , jTable1);
+            jLabel10.setText("Ligne Modifier !!!");
+            jLabel10.setVisible(true);
+            jLabel9.setVisible(false);
+            ligneCommande_view.clear(jTextField23,jTextField26, jComboBox1,jComboBox2 , jTable1);
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jTextField23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField23ActionPerformed
@@ -427,6 +502,33 @@ public class LigneCommande extends javax.swing.JInternalFrame {
         String titre = "Liste des Clients";
         Impression_Exportation.imprimerTable(jTable1,titre);
     }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        if(jTextField23.getText().equals(""))
+        {
+            jLabel9.setText("Veuiller Entrer id !!!");
+            jLabel9.setVisible(true);
+        }else {
+            try {
+                ligneCommande_view.SearchLigneCmd(jTextField23,jTable1);
+                if(jTable1.getRowCount()==0)
+                {
+                    jLabel9.setText("Veuiller Entrer Chaine valide !!!");
+                    jLabel9.setVisible(true);
+                }
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+        ligneCommande_view.clear(jTextField23,jTextField26,jComboBox1,jComboBox2,jTable1);
+        jLabel9.setVisible(false);
+        jLabel10.setVisible(false);
+    }//GEN-LAST:event_jButton11ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

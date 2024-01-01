@@ -5,12 +5,12 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.sql.*;
 
-public class ligneCommande_view extends Component {
+public class lignelivraison_view extends Component {
 
     public static void populateTable(JTable table) throws SQLException {
         try(Connection con = connection.getConnection())
         {
-            String query = "Select * From ligne_commande";
+            String query = "Select * From ligne_livraison";
             try(PreparedStatement preparedStatement = con.prepareStatement(query);
                 ResultSet resultSet = preparedStatement.executeQuery()) {
                 ResultSetMetaData metaData = resultSet.getMetaData();
@@ -37,9 +37,9 @@ public class ligneCommande_view extends Component {
     }
 
 
-    public static void populateCombo1(JComboBox<String> j1) throws SQLException {
+    public static void populateCombo2(JComboBox<String> j1) throws SQLException {
         try (Connection con = connection.getConnection()) {
-            String query = "SELECT Num FROM Commande";
+            String query = "SELECT code FROM fournisseur";
             try (PreparedStatement preparedStatement = con.prepareStatement(query)) {
                 ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -48,14 +48,15 @@ public class ligneCommande_view extends Component {
 
                 // Add items from the result set to the combo box
                 while (resultSet.next()) {
-                    String nom = resultSet.getString("Num");
+                    String nom = resultSet.getString("code");
                     j1.addItem(nom);
                 }
             }
         }
     }
 
-    public static void populateCombo2(JComboBox<String> j1) throws SQLException {
+
+    public static void populateCombo1(JComboBox<String> j1) throws SQLException {
         try (Connection con = connection.getConnection()) {
             String query = "SELECT code FROM article";
             try (PreparedStatement preparedStatement = con.prepareStatement(query)) {
@@ -73,6 +74,7 @@ public class ligneCommande_view extends Component {
         }
     }
 
+
     public static void SelectRow(JTextField j1,JTextField j2, JComboBox<String> j3, JComboBox<String> j4, JTable table) {
         int selectedRow = table.getSelectedRow();
 
@@ -80,22 +82,22 @@ public class ligneCommande_view extends Component {
             DefaultTableModel model = (DefaultTableModel) table.getModel();
 
             String id = model.getValueAt(selectedRow, 0).toString();
-            String Quantite_cmd = model.getValueAt(selectedRow, 1).toString();
-            String codeDepot = model.getValueAt(selectedRow, 2).toString();
-            String codeArticle = model.getValueAt(selectedRow, 3).toString();
+            String Quantite_livr = model.getValueAt(selectedRow, 1).toString();
+            String codeArticle = model.getValueAt(selectedRow, 2).toString();
+            String codeFrn = model.getValueAt(selectedRow, 3).toString();
 
 
             j1.setText(id);
-            j2.setText(Quantite_cmd);
-            j3.setSelectedItem(codeDepot);
-            j4.setSelectedItem(codeArticle);
+            j2.setText(Quantite_livr);
+            j3.setSelectedItem(codeArticle);
+            j4.setSelectedItem(codeFrn);
         }
     }
 
 
-    public static void addLigneCmd(JTextField j1,JTextField j2, JComboBox<String> j3, JComboBox<String> j4, JTable table) throws SQLException {
+    public static void addLigneliv(JTextField j1,JTextField j2, JComboBox<String> j3, JComboBox<String> j4, JTable table) throws SQLException {
         try (Connection con = connection.getConnection()) {
-            String insertQuery = "INSERT INTO `ligne_commande` (`id`,`quantite_commande`, `code_cmd`, `code_article`) VALUES (?, ?, ?,?);";
+            String insertQuery = "INSERT INTO `ligne_livraison` (`id`,`quantite_livre`, `code_article`, `code_fourn`) VALUES (?, ?, ?,?);";
             try (PreparedStatement preparedStatement = con.prepareStatement(insertQuery)) {
                 preparedStatement.setString(1, j1.getText());
                 preparedStatement.setString(2,j2.getText());
@@ -112,10 +114,10 @@ public class ligneCommande_view extends Component {
     }
 
 
-    public static void DeleteLigneCmd(JTextField j1,JTable table)
+    public static void DeleteLigneliv(JTextField j1,JTable table)
     {
         try(Connection con = connection.getConnection()){
-            String query = "Delete from ligne_commande where id = ? ";
+            String query = "Delete from ligne_livraison where id = ? ";
             try(PreparedStatement preparedStatement = con.prepareStatement(query)){
                 preparedStatement.setString(1,j1.getText());
 
@@ -128,9 +130,10 @@ public class ligneCommande_view extends Component {
         }
     }
 
-    public static void UpdateLigneCmd(JTextField j1,JTextField j2, JComboBox<String> j3, JComboBox<String> j4, JTable table) {
+
+    public static void UpdateLigneliv(JTextField j1,JTextField j2, JComboBox<String> j3, JComboBox<String> j4, JTable table) {
         try (Connection con = connection.getConnection()) {
-            String query = "UPDATE `ligne_commande` SET `id` = ?,`quantite_commande` = ?, `code_cmd` = ?, `code_article` = ? WHERE `ligne_commande`.`id` = ?";
+            String query = "UPDATE `ligne_livraison` SET `id` = ?,`quantite_livre` = ?, `code_article` = ?, `code_fourn` = ? WHERE `ligne_livraison`.`id` = ?";
             try (PreparedStatement preparedStatement = con.prepareStatement(query)) {
                 preparedStatement.setString(1, j1.getText());
                 preparedStatement.setString(2, j2.getText());
@@ -147,9 +150,9 @@ public class ligneCommande_view extends Component {
     }
 
 
-    public static void SearchLigneCmd(JTextField j1, JTable table) throws SQLException {
+    public static void SearchLigneliv(JTextField j1, JTable table) throws SQLException {
         try (Connection con = connection.getConnection()) {
-            String query = "SELECT * FROM ligne_commande WHERE id = ?";
+            String query = "SELECT * FROM ligne_livraison WHERE id = ?";
             try (PreparedStatement preparedStatement = con.prepareStatement(query)) {
                 preparedStatement.setString(1, j1.getText());
 
