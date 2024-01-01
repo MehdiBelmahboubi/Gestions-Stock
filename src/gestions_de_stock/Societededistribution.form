@@ -145,7 +145,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="69" green="4d" red="2a" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Gestions S.distrubution"/>
+        <Property name="text" type="java.lang.String" value="Gestions S.distribution"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JPanel" name="jPanel1">

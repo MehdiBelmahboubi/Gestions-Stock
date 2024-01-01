@@ -117,7 +117,7 @@ public class Societededistribution extends javax.swing.JInternalFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Variable", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(42, 77, 105));
-        jLabel1.setText("Gestions S.distrubution");
+        jLabel1.setText("Gestions S.distribution");
 
         jPanel1.setBackground(new java.awt.Color(42, 77, 105));
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
