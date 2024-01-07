@@ -75,31 +75,34 @@ public class Stock_view extends Component {
     }
 
 
-    public static void SelectRow(JTextField j1, JComboBox<String> j2, JComboBox<String> j3, JTable table) {
+    public static void SelectRow(JTextField j1,JTextField j2, JComboBox<String> j3, JComboBox<String> j4, JTable table) {
         int selectedRow = table.getSelectedRow();
 
         if (selectedRow >= 0) {
             DefaultTableModel model = (DefaultTableModel) table.getModel();
 
             String num = model.getValueAt(selectedRow, 0).toString();
-            String codeDepot = model.getValueAt(selectedRow, 1).toString();
-            String codeArticle = model.getValueAt(selectedRow, 2).toString();
+            String qut_stc = model.getValueAt(selectedRow,1).toString();
+            String codeDepot = model.getValueAt(selectedRow, 2).toString();
+            String codeArticle = model.getValueAt(selectedRow, 3).toString();
 
 
             j1.setText(num);
-            j2.setSelectedItem(codeDepot);
-            j3.setSelectedItem(codeArticle);
+            j2.setText(qut_stc);
+            j3.setSelectedItem(codeDepot);
+            j4.setSelectedItem(codeArticle);
         }
     }
 
 
-    public static void addStock(JTextField j1, JComboBox<String> j2, JComboBox<String> j3, JTable table) throws SQLException {
+    public static void addStock(JTextField j1,JTextField j2, JComboBox<String> j3, JComboBox<String> j4, JTable table) throws SQLException {
         try (Connection con = connection.getConnection()) {
-            String insertQuery = "INSERT INTO `stock` (`id`, `code_depot`, `code_article`) VALUES (?, ?, ?);";
+            String insertQuery = "INSERT INTO `stock` (`id`,`quantite_stock`, `code_depot`, `code_article`) VALUES (?, ?, ?,?);";
             try (PreparedStatement preparedStatement = con.prepareStatement(insertQuery)) {
                 preparedStatement.setString(1, j1.getText());
-                preparedStatement.setString(2, j2.getSelectedItem().toString());
+                preparedStatement.setString(2, j1.getText());
                 preparedStatement.setString(3, j3.getSelectedItem().toString());
+                preparedStatement.setString(4, j4.getSelectedItem().toString());
 
                 preparedStatement.executeUpdate();
 
@@ -127,14 +130,15 @@ public class Stock_view extends Component {
     }
 
 
-    public static void UpdateStock(JTextField j1, JComboBox<String> j2, JComboBox<String> j3, JTable table) {
+    public static void UpdateStock(JTextField j1,JTextField j2, JComboBox<String> j3, JComboBox<String> j4, JTable table) {
         try (Connection con = connection.getConnection()) {
-            String query = "UPDATE `stock` SET `id` = ?, `code_depot` = ?, `code_article` = ? WHERE `stock`.`id` = ?";
+            String query = "UPDATE `stock` SET `id` = ?,`quantite_stock` = ?, `code_depot` = ?, `code_article` = ? WHERE `stock`.`id` = ?";
             try (PreparedStatement preparedStatement = con.prepareStatement(query)) {
                 preparedStatement.setString(1, j1.getText());
-                preparedStatement.setString(2, j2.getSelectedItem().toString());
+                preparedStatement.setString(2, j2.getText());
                 preparedStatement.setString(3, j3.getSelectedItem().toString());
-                preparedStatement.setString(4, j1.getText());
+                preparedStatement.setString(4, j4.getSelectedItem().toString());
+                preparedStatement.setString(5, j1.getText());
 
                 preparedStatement.executeUpdate();
                 populateTable(table);

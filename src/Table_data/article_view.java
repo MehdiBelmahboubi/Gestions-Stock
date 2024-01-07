@@ -41,7 +41,7 @@ public class article_view extends Component {
 
     public static void addarticle(JTextField j1, JTextField j2, JTextField j3, JTextField j4,  JTable table) throws SQLException {
         try(Connection con = connection.getConnection()) {
-            String insertquery = "INSERT INTO `article` (`code`, `Nom`, `quantite_stock`, `prix`) VALUES (?, ?, ?, ?);";
+            String insertquery = "INSERT INTO `article` (`code`, `Nom`, `Marque`, `prix`) VALUES (?, ?, ?, ?);";
             try(PreparedStatement preparedStatement = con.prepareStatement(insertquery)) {
                 preparedStatement.setString(1,j1.getText());
                 preparedStatement.setString(2,j2.getText());
@@ -77,7 +77,7 @@ public class article_view extends Component {
     public static void Updatearticle(JTextField j1, JTextField j2, JTextField j3, JTextField j4, JTable table)
     {
         try(Connection con = connection.getConnection()) {
-            String query = "UPDATE `article` SET `code` = ?, `Nom` = ?, `quantite_stock` = ?, `prix` = ? WHERE `article`.`code` = ?";
+            String query = "UPDATE `article` SET `code` = ?, `Nom` = ?, `Marque` = ?, `prix` = ? WHERE `article`.`code` = ?";
             try (PreparedStatement preparedStatement = con.prepareStatement(query)){
                 preparedStatement.setString(1,j1.getText());
                 preparedStatement.setString(2,j2.getText());
