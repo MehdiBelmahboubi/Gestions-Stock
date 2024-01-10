@@ -425,12 +425,15 @@ public class Fournisseur extends javax.swing.JInternalFrame {
             jLabel9.setText("Veuiller remplir Tous les Champs !!!");
             jLabel9.setVisible(true);
         }else {
+            int option = JOptionPane.showConfirmDialog(null, "Êtes-vous sûr de vouloir supprimer ce depot?", "Confirmation", JOptionPane.YES_NO_OPTION);
 
-            fournisseur_view.Deletefournisseur(jTextField23,jTable1);
-            jLabel10.setText("Fournisseur Supprimer !!!");
-            jLabel10.setVisible(true);
-            jLabel9.setVisible(false);
-            fournisseur_view.clear(jTextField23, jTextField24, jTextField26, jTextField27, jTable1);
+            if (option == JOptionPane.YES_OPTION) {
+                fournisseur_view.Deletefournisseur(jTextField23, jTable1);
+                jLabel10.setText("Fournisseur Supprimer !!!");
+                jLabel10.setVisible(true);
+                jLabel9.setVisible(false);
+                fournisseur_view.clear(jTextField23, jTextField24, jTextField26, jTextField27, jTable1);
+            }
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 

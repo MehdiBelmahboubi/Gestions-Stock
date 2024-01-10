@@ -6,6 +6,7 @@ package gestions_de_stock;
 
 import Table_data.*;
 
+import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
@@ -445,12 +446,15 @@ public class Stock extends javax.swing.JInternalFrame {
             jLabel9.setText("Veuiller remplir Tous les Champs !!!");
             jLabel9.setVisible(true);
         }else {
+            int option = JOptionPane.showConfirmDialog(null, "Êtes-vous sûr de vouloir supprimer Ce Stock?", "Confirmation", JOptionPane.YES_NO_OPTION);
 
-            Stock_view.DeleteStock(jTextField23,jTable1);
-            jLabel10.setText("Stock Supprimer !!!");
-            jLabel10.setVisible(true);
-            jLabel9.setVisible(false);
-            Stock_view.clear(jTextField23, jComboBox1,jComboBox2 , jTable1);
+            if (option == JOptionPane.YES_OPTION) {
+                Stock_view.DeleteStock(jTextField23, jTable1);
+                jLabel10.setText("Stock Supprimer !!!");
+                jLabel10.setVisible(true);
+                jLabel9.setVisible(false);
+                Stock_view.clear(jTextField23, jComboBox1, jComboBox2, jTable1);
+            }
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 

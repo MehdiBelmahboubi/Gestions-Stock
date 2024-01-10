@@ -419,12 +419,15 @@ public class Article extends javax.swing.JInternalFrame {
             jLabel9.setText("Veuiller remplir Tous les Champs !!!");
             jLabel9.setVisible(true);
         }else {
+            int option = JOptionPane.showConfirmDialog(null, "Êtes-vous sûr de vouloir supprimer ce article?", "Confirmation", JOptionPane.YES_NO_OPTION);
 
-            article_view.Deletearticle(jTextField22,jTable1);
-            jLabel10.setText("Article Supprimer !!!");
-            jLabel10.setVisible(true);
-            jLabel9.setVisible(false);
-            article_view.clear(jTextField22, jTextField23, jTextField26, jTextField24, jTable1);
+            if (option == JOptionPane.YES_OPTION) {
+                article_view.Deletearticle(jTextField22, jTable1);
+                jLabel10.setText("Article Supprimer !!!");
+                jLabel10.setVisible(true);
+                jLabel9.setVisible(false);
+                article_view.clear(jTextField22, jTextField23, jTextField26, jTextField24, jTable1);
+            }
         }
 
 

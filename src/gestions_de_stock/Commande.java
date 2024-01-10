@@ -9,6 +9,7 @@ import Table_data.Commande_views;
 import Table_data.Impression_Exportation;
 import Table_data.navigation_button;
 
+import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
@@ -419,12 +420,15 @@ public class Commande extends javax.swing.JInternalFrame {
             jLabel9.setText("Veuiller remplir Tous les Champs !!!");
             jLabel9.setVisible(true);
         }else {
+            int option = JOptionPane.showConfirmDialog(null, "Êtes-vous sûr de vouloir supprimer cette commande?", "Confirmation", JOptionPane.YES_NO_OPTION);
 
-            Commande_views.DeleteCommande(jTextField23,jTable1);
-            jLabel10.setText("Commande Supprimer !!!");
-            jLabel10.setVisible(true);
-            jLabel9.setVisible(false);
-            Commande_views.clear(jTextField23, jComboBox1,jDateChooser1 , jTable1);
+            if (option == JOptionPane.YES_OPTION) {
+                Commande_views.DeleteCommande(jTextField23, jTable1);
+                jLabel10.setText("Commande Supprimer !!!");
+                jLabel10.setVisible(true);
+                jLabel9.setVisible(false);
+                Commande_views.clear(jTextField23, jComboBox1, jDateChooser1, jTable1);
+            }
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 

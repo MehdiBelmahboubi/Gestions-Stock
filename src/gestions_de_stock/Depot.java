@@ -12,6 +12,7 @@ import Table_data.article_view;
 import Table_data.depot_view;
 import Table_data.navigation_button;
 
+import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
@@ -420,12 +421,15 @@ public class Depot extends javax.swing.JInternalFrame {
             jLabel9.setText("Veuiller remplir Tous les Champs !!!");
             jLabel9.setVisible(true);
         }else {
+            int option = JOptionPane.showConfirmDialog(null, "Êtes-vous sûr de vouloir supprimer ce depot?", "Confirmation", JOptionPane.YES_NO_OPTION);
 
-            depot_view.Deletedepot(jTextField23,jTable1);
-            jLabel10.setText("Dépot Supprimer !!!");
-            jLabel10.setVisible(true);
-            jLabel9.setVisible(false);
-            depot_view.clear(jTextField23, jTextField26, jTextField27, jTable1);
+            if (option == JOptionPane.YES_OPTION) {
+                depot_view.Deletedepot(jTextField23, jTable1);
+                jLabel10.setText("Dépot Supprimer !!!");
+                jLabel10.setVisible(true);
+                jLabel9.setVisible(false);
+                depot_view.clear(jTextField23, jTextField26, jTextField27, jTable1);
+            }
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 

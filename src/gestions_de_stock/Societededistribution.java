@@ -9,6 +9,7 @@ import Table_data.Impression_Exportation;
 import Table_data.Societedistribution_view;
 import Table_data.navigation_button;
 
+import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
@@ -481,12 +482,15 @@ public class Societededistribution extends javax.swing.JInternalFrame {
             jLabel10.setText("Veuiller remplir Tous les Champs !!!");
             jLabel10.setVisible(true);
         }else {
+            int option = JOptionPane.showConfirmDialog(null, "Êtes-vous sûr de vouloir supprimer cette societe de distrubution?", "Confirmation", JOptionPane.YES_NO_OPTION);
 
-            Societedistribution_view.DeleteSociete(jTextField1,jTable1);
-            jLabel11.setText("Societe Supprimer !!!");
-            jLabel11.setVisible(true);
-            jLabel10.setVisible(false);
-            Societedistribution_view.clear(jTextField1,jTextField2,jTextField3,jTextField8,jTextField5,jTextField6,jComboBox1,jTable1);
+            if (option == JOptionPane.YES_OPTION) {
+                Societedistribution_view.DeleteSociete(jTextField1, jTable1);
+                jLabel11.setText("Societe Supprimer !!!");
+                jLabel11.setVisible(true);
+                jLabel10.setVisible(false);
+                Societedistribution_view.clear(jTextField1, jTextField2, jTextField3, jTextField8, jTextField5, jTextField6, jComboBox1, jTable1);
+            }
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 

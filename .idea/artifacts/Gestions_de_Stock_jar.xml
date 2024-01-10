@@ -1,0 +1,26 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Gestions_de_Stock:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Gestions_de_Stock_jar</output-path>
+    <root id="archive" name="Gestions_de_Stock.jar">
+      <element id="module-output" name="Gestions_de_Stock" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/xmlbeans-4.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jcalendar-1.4.jar" path-in-jar="/" />
+      <element id="library" level="project" name="DateChooser" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/poi-ooxml-lite-5.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/poi-5.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/poi-excelant-5.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/poi-ooxml-full-5.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/commons-math3-3.6.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/poi-ooxml-5.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/commons-collections4-4.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/pie-chart.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/poi-scratchpad-5.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/poi-integration-5.0.0.jar" path-in-jar="/" />
+      <element id="library" level="project" name="jars" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/commons-compress-1.20.jar" path-in-jar="/" />
+      <element id="library" level="application" name="mssql-jdbc-12.4.2.jre11" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/poi-examples-5.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/mysql-connector-j-8.2.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

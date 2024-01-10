@@ -14,8 +14,8 @@ public class article_view extends Component {
         try(Connection con = connection.getConnection())
         {
             String query = "Select * From article";
-            try(PreparedStatement preparedStatement = con.prepareStatement(query);
-                ResultSet resultSet = preparedStatement.executeQuery()) {
+                try(PreparedStatement preparedStatement = con.prepareStatement(query);
+                    ResultSet resultSet = preparedStatement.executeQuery()) {
                 ResultSetMetaData metaData = resultSet.getMetaData();
                 int columnCount = metaData.getColumnCount();
                 String[] columnNames = new String[columnCount];
@@ -152,7 +152,6 @@ public class article_view extends Component {
             j2.setText(Nom);
             j3.setText(quantite_stock);
             j4.setText(prix);
-
         }
     }
 }
